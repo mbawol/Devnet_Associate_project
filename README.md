@@ -28,7 +28,9 @@ Skrypt wymaga bezpośredniego połączenia z siecią zarządzającą urządzenia
 ##  Użycie
 
 ### Podstawowe uruchomienie
-Skrypt zapyta interaktywnie o hasło (nie będzie widoczne podczas wpisywania).
+Skrypt zapyta interaktywnie o hasło (nie będzie widoczne podczas wpisywania),
+a następnie utworzy interfejs logiczny Loopback z podanym adresem IPv4
+lub nadpisze jego konfigurację, jeśli interfejs już istnieje.
 
 ```bash
 python3 Devnet_zaliczenie.py --intf Loopback101 --ip 172.16.101.1
