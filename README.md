@@ -28,9 +28,10 @@ Skrypt wymaga bezpośredniego połączenia z siecią zarządzającą urządzenia
 ##  Użycie
 
 ### Podstawowe uruchomienie
-Skrypt zapyta interaktywnie o hasło (nie będzie widoczne podczas wpisywania),
-a następnie utworzy interfejs logiczny Loopback z podanym adresem IPv4
-lub nadpisze jego konfigurację, jeśli interfejs już istnieje.
+Skrypt wysyła żądanie RESTCONF `PUT`, które tworzy lub aktualizuje
+konfigurację interfejsu Loopback wraz z adresacją IPv4.
+Dane uwierzytelniające są pobierane interaktywnie.
+
 
 ```bash
 python3 Devnet_zaliczenie.py --intf Loopback101 --ip 172.16.101.1
@@ -49,6 +50,6 @@ python3 Devnet_zaliczenie.py \
 
 ### Wyłączenie interfejsu (Shutdown)
   Utworzenie interfejsu w stanie admin down(wyłączony)
-  ```bash
-  python3 Devnet_zaliczenie.py --intf Loopback99 --ip 192.168.99.1 --shutdown
-  ```
+```bash
+python3 Devnet_zaliczenie.py --intf Loopback99 --ip 192.168.99.1 --shutdown
+```
